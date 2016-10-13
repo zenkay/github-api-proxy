@@ -1,0 +1,19 @@
+{
+  "name": "github-api-proxy",
+  "version": "1.0.0",
+  "description": "Proxy for Github API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "github",
+    "api",
+    "proxy"
+  ],
+  "author": "Andrea Mostosi <andrea.mostosi@zenkay.net> (http://usefulstuff.io)",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^15.1.1"
+  }
+}
