@@ -10,7 +10,14 @@ server.route({
     method: 'GET',
     path: '/repos',
     handler: function (request, reply) {
-        reply('/repos');
+        reply(
+            [
+                {
+                    "id" : 1296269 ,
+                    "name" : "Hello-World"
+                }
+            ]
+        );
     }
 });
 
@@ -19,7 +26,20 @@ server.route({
     method: 'GET',
     path: '/repos/{id}',
     handler: function (request, reply) {
-        reply('/repos/' + encodeURIComponent(request.params.id));
+        reply(
+            {
+                "id" : 1296269 ,
+                "user" : {
+                    "login" : "octocat" ,
+                    "id" : 1 ,
+                    },
+                "name" : "Hello-World" ,
+                "description" : "This your first repo!" ,
+                "pushed_at" : "2011-01-26T19:06:43Z" ,
+                "created_at" : "2011-01-26T19:01:12Z" ,
+                "updated_at" : "2011-01-26T19:14:43Z" ,
+            }
+        );
     }
 });
 
@@ -28,7 +48,15 @@ server.route({
     method: 'GET',
     path: '/repos/search/{query}',
     handler: function (request, reply) {
-        reply('/repos/search/' + encodeURIComponent(request.params.query));
+        reply(
+            [
+                {
+                    "id" : 1296269 ,
+                    "name" : "Hello-World" ,
+                    "description" : "this is your first repo!" ,
+                }
+            ]
+        );
     }
 });
 

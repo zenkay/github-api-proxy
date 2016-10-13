@@ -1,16 +1,21 @@
 var frisby = require('frisby');
 
+TEST_DOMAIN = "http://localhost:3000"
+
 frisby.create('Show repos index')
-  .get('http://localhost:3000/repos')
+  .get(TEST_DOMAIN + '/repos')
   .expectStatus(200)
-  .toss();
+  .expectHeaderContains('content-type', 'application/json')
+.toss();
 
 frisby.create('Show repo details')
-  .get('http://localhost:3000/repos/32375923')
+  .get(TEST_DOMAIN + '/repos/32375923')
   .expectStatus(200)
-  .toss();
+  .expectHeaderContains('content-type', 'application/json')
+.toss();
 
 frisby.create('Show results for text search')
-  .get('http://localhost:3000/repos/search/devise')
+  .get(TEST_DOMAIN + '/repos/search/devise')
   .expectStatus(200)
-  .toss();
+  .expectHeaderContains('content-type', 'application/json')
+.toss();
