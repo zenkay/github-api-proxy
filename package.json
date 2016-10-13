@@ -14,6 +14,8 @@
   "author": "Andrea Mostosi <andrea.mostosi@zenkay.net> (http://usefulstuff.io)",
   "license": "MIT",
   "dependencies": {
+    "github": "^5.2.0",
     "hapi": "^15.1.1"
-  }
+  },
+  "engine": "node 6.8.0"
 }
