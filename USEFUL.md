@@ -1,3 +1,6 @@
-Vows http://vowsjs.org/
-Mocha https://mochajs.org/
-Jasmine http://jasmine.github.io/
+http://vowsjs.org/
+https://mochajs.org/
+http://jasmine.github.io/
+https://blog.nodejitsu.com/package-dependencies-done-right/
+http://hapijs.com/tutorials
+http://frisbyjs.com/
