@@ -5,3 +5,14 @@ https://blog.nodejitsu.com/package-dependencies-done-right/
 http://hapijs.com/tutorials
 http://frisbyjs.com/
 https://github.com/vlucas/frisby
+https://github.com/remy/nodemon
+http://hapijs.com/tutorials/auth
+https://github.com/mpneuried/nodecache
+http://stevenlu.com/posts/2013/03/07/using-redis-for-caching-in-nodejs/
+https://onsen.io/blog/mocha-chaijs-unit-test-coverage-es6/
+https://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/
+http://www.syntaxsuccess.com/viewarticle/writing-jasmine-unit-tests-in-es6
+http://amanvirk.me/singleton-classes-in-es6/
+https://github.com/assaf/node-replay
+https://github.com/elcuervo/vcr.js
+https://mikedeboer.github.io/node-github/
