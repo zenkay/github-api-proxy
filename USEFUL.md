@@ -16,3 +16,5 @@ http://amanvirk.me/singleton-classes-in-es6/
 https://github.com/assaf/node-replay
 https://github.com/elcuervo/vcr.js
 https://mikedeboer.github.io/node-github/
+https://developer.github.com/v3/
+https://developer.github.com/v3/repos/#list-all-public-repositories
