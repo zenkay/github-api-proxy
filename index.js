@@ -1,45 +1,64 @@
 'use strict';
 
 const Hapi = require('hapi');
+const AuthBearer = require('hapi-auth-bearer-token');
 const Github = require('./lib/github.js');
 
-var github = new Github();
-const server = new Hapi.Server();
+const github = new Github();
+let server = new Hapi.Server();
 server.connection({ port: 3000 });
 
-// Index of a repo
-server.route({
-    method: 'GET',
-    path: '/repos',
-    handler: function (request, reply) {
-        let results = github.getRepos();
-        reply(results);
-    }
-});
+server.register(AuthBearer, (err) => {
 
-// Details about a repo
-server.route({
-    method: 'GET',
-    path: '/repos/{id}',
-    handler: function (request, reply) {
-        let repo_id = encodeURIComponent(request.params.id)
-        let result = github.getRepo(repo_id);
-        reply(result);
-    }
-});
+    // Set auth method
+    server.auth.strategy('simple', 'bearer-access-token', {
+        accessTokenName: 'access_token',
+        validateFunc: function( token, callback ) {
+            var request = this;
+            if(token === "very-very-strong-auth-method") {callback(null, true, { token: token })}
+            else {callback(null, false, { token: token })}
+        }
+    });
 
-// Search repo
-server.route({
-    method: 'GET',
-    path: '/repos/search/{query}',
-    handler: function (request, reply) {
-        let query = encodeURIComponent(request.params.query)
-        let results = github.search(query);
-        reply(results);
-    }
-});
+    // Index of a repo
+    server.route({
+        method: 'GET',
+        path: '/repos',
+        config: { auth: 'simple' },
+        handler: function (request, reply) {
+            let results = github.getRepos();
+            reply(results);
+        }
+    });
 
-server.start((err) => {
-    if (err) {throw err;}
-    console.log(`Server running at: ${server.info.uri}`);
+    // Details about a repo
+    server.route({
+        method: 'GET',
+        path: '/repos/{id}',
+        config: { auth: 'simple' },
+        handler: function (request, reply) {
+            let repo_id = encodeURIComponent(request.params.id)
+            let result = github.getRepo(repo_id);
+            reply(result);
+        }
+    });
+
+    // Search repo
+    server.route({
+        method: 'GET',
+        path: '/repos/search/{query}',
+        config: { auth: 'simple' },
+        handler: function (request, reply) {
+            let query = encodeURIComponent(request.params.query)
+            let results = github.search(query);
+            reply(results);
+        }
+    });
+
+    // Run server
+    server.start((err) => {
+        if (err) {throw err;}
+        console.log(`Server running at: ${server.info.uri}`);
+    });
+
 });
