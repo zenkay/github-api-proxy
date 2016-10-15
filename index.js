@@ -1,5 +1,7 @@
 'use strict';
 
+const TOKEN = "3722f439ebb2007c397fdbfa52e298d3d56ed5d9"
+
 const Hapi = require('hapi');
 const AuthBearer = require('hapi-auth-bearer-token');
 const Github = require('./lib/github.js');
@@ -15,7 +17,7 @@ server.register(AuthBearer, (err) => {
         accessTokenName: 'access_token',
         validateFunc: function( token, callback ) {
             var request = this;
-            if(token === "very-very-strong-auth-method") {callback(null, true, { token: token })}
+            if(token === TOKEN) {callback(null, true, { token: token })}
             else {callback(null, false, { token: token })}
         }
     });
