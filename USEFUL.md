@@ -24,3 +24,6 @@ https://github.com/johnbrett/hapi-auth-bearer-token/issues/16
 https://futurestud.io/tutorials/hapi-get-your-server-up-and-running
 http://stackoverflow.com/questions/31424561/wait-until-all-es6-promises-complete-even-rejected-promises
 https://github.com/ptarjan/node-cache
+https://www.sitepoint.com/promises-in-javascript-unit-tests-the-definitive-guide/
+https://blog.codeship.com/jasmine-node-js-application-testing-tutorial/
+http://ng-learn.org/2014/08/Testing_Promises_with_Jasmine/
