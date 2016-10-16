@@ -22,3 +22,5 @@ https://github.com/johnbrett/hapi-auth-bearer-token
 https://github.com/johnbrett/hapi-auth-bearer-token/blob/master/test/index.js
 https://github.com/johnbrett/hapi-auth-bearer-token/issues/16
 https://futurestud.io/tutorials/hapi-get-your-server-up-and-running
+http://stackoverflow.com/questions/31424561/wait-until-all-es6-promises-complete-even-rejected-promises
+https://github.com/ptarjan/node-cache
