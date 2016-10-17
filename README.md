@@ -2,7 +2,7 @@
 
 ## Setup
 
-This project was developed on Node.js v6.8.0. It has not be tested on other version but should work (I hope) on any recente version which supports ES6 syntax.
+This project was developed on Node.js v6.8.0. It has not be tested on other version but should work (I hope) on any recent version which supports ES6 syntax.
 
 First of all checkout the code from this repository than follow the instructions below.
 
@@ -104,7 +104,7 @@ N.B. Your server needs to be running when you run tests.
 
 ## Project structure
 
-The API is based on [hapi](http://hapijs.com/). 
+The API is based on [hapi](http://hapijs.com/).
 
 ```index.js``` implements endpoints logic and use [hapi-auth-bearer-token](https://github.com/johnbrett/hapi-auth-bearer-token) to handle authorization. Is not the best available solution but is easy to implement and extends. Probably a better solution would implement OAuth protocol.
 
