@@ -56,7 +56,7 @@ To start the server simply run
 
 and the project start answer at http://localhost:3000
 
-For development purpose is better to use something that reload the server after each update. I personally use ```nodemon```
+For development purpose is better to use something that reload the server after each update. I personally use [nodemon](https://github.com/remy/nodemon)
 
 ```
 # nodemon index.js
@@ -110,7 +110,7 @@ The API is based on [hapi](http://hapijs.com/).
 
 Caching is implemented in memory using [memory-cache](https://github.com/ptarjan/node-cache). I suppose it doesn't scale but works really well and doesn't require external storage like Redis or Memcache.
 
-```lib/github.js``` implement a wrapper to [node-github](https://mikedeboer.github.io/node-github/) and handle data format manipulation using object defined into other classes inside ```lib```. It also chatches connection errors with Github.
+```lib/github.js``` implement a wrapper over [node-github](https://mikedeboer.github.io/node-github/) and handle data format manipulation using object defined into other classes inside ```lib```. It also chatches connection errors of Github APIs.
 
 ```spec/server_spec.js```implements tests for API endpoints.
 
